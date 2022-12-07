@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { logo } from "../assets";
 
 type Props = {};
@@ -8,15 +9,17 @@ const Navbar = (props: Props) => {
 		<div className="flex justify-between">
 			<div className="flex flex-row space-x-6 items-center">
 				<img src={logo} alt="logo" width={30} />
-				<p className="text-[20px] font-semibold">Filter Movie</p>
+				<Link to={"/"}>
+					<p className="text-[20px] font-semibold">Filter Movie</p>
+				</Link>
 			</div>
 			<div className=" space-x-4">
-				<a href="#" className="px-4 py-2 bg-slate-500 rounded-[5px]">
+				<Link to={"/register"} className="px-4 py-2 bg-slate-500 rounded-[5px]">
 					Register
-				</a>
-				<a href="#" className="px-4 py-2 bg-red-500 rounded-[5px]">
+				</Link>
+				<Link to={"/login"} className="px-4 py-2 bg-red-500 rounded-[5px]">
 					Login
-				</a>
+				</Link>
 			</div>
 		</div>
 	);
